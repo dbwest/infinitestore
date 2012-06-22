@@ -8,7 +8,8 @@ gem 'rails', '3.2.5'
 gem 'pg'
 gem 'bootstrap-sass', '~> 2.0.3'
 gem 'bootswatch-rails'
-  gem 'sass-rails',   '~> 3.2.3'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'nokogiri'
 
 # Gems used only for assets and not required
 # in production environments by default.

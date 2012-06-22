@@ -130,6 +130,7 @@ DEPENDENCIES
   bootswatch-rails
   coffee-rails (~> 3.2.1)
   jquery-rails
+  nokogiri
   pg
   rails (= 3.2.5)
   rspec
