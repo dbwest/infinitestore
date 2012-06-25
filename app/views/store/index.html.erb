@@ -1,14 +1,28 @@
-<h1></h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Pragmatic Catalog</h1>
+
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
     <h3><%= product.title %></h3>
     <%= sanitize(product.description) %>
     <div class="price_line">
-      <span class="price"><%= product.price %></span>
-      <%= button_to("Add to", line_items_path(product_id: product), :class => "btn btn-primary", remote: true) do %>
-        <i class="icon-shopping-cart icon-white">Cart</i>
+      <span class="price"><%= number_to_currency(product.price) %></span>
+<!-- START_HIGHLIGHT -->
+      
+      <%= link_to line_items_path(product_id: product), :class => "btn btn-primary", :remote => "true" do %>
+        Add to Cart 
+        <%= content_tag :i, :class => "icon-shopping-cart icon-white" do %>
+        <% end %>
       <% end %>
+
+      <i class="icon-shopping-cart icon-white">
+</i>
+    
+<!-- END_HIGHLIGHT -->
     </div>
   </div>
 <% end %>

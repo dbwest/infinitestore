@@ -13,8 +13,8 @@
 
 // using 'Cyborg' bootswatch
 //
-// First import journal variables
-@import "bootswatch/cyborg/variables";
+// First import cyborg variables
+//@import "bootswatch/cyborg/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
@@ -26,7 +26,7 @@ body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
 // And finally bootswatch style itself
-@import "bootswatch/cyborg/bootswatch";
+//@import "bootswatch/cyborg/bootswatch";
 
 // Whatever application styles you have go last
 //@import "base";
