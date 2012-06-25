@@ -11,4 +11,7 @@ class ApplicationController < ActionController::Base
       cart
     end
 
+protected
+
+
 end

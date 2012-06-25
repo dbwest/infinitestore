@@ -7,6 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class Cart < ActiveRecord::Base
+  attr_accessible :product_id, :product
   has_many :line_items, dependent: :destroy
 
   def add_product(product_id)
@@ -15,7 +16,6 @@ class Cart < ActiveRecord::Base
       current_item.quantity += 1
     else
       current_item = line_items.build(product_id: product_id)
-      current_item.price = current_item.product.price
     end
     current_item
   end

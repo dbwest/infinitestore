@@ -7,7 +7,8 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class LineItem < ActiveRecord::Base
-  attr_accessible :product_id, :cart_id
+  attr_accessible :cart_id, :product_id
+  #attr_accessible :product, :cart, :quantity, :product_id
   belongs_to :product
   belongs_to :cart
 
