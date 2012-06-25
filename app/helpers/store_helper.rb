@@ -1,9 +1,11 @@
 module StoreHelper
 	def new_row_every_3 (&block)
-		attributes = {}
-		count = 3
-	    if (count%3==0)
+	    if (@count%3==0)
+	    	@count += 1
 		    content_tag("div", :class => "row", &block)
-		end
+		else
+			@count += 1
+		end	
+	    content_tag("div", &block)
     end
 end
