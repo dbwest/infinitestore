@@ -1,4 +1,20 @@
 Dailythreads::Application.routes.draw do
+  get "store/sunglasses"
+
+  get "store/shirts"
+
+  get "store/shoes"
+
+  get "store/belts"
+
+  get "store/watches"
+
+  get "store/pants"
+
+  get "store/underwear"
+
+  get "store/hats"
+
   resources :line_items
 
   resources :carts

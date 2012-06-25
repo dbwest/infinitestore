@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 2.0.3'
 # gem 'bootswatch-rails'
 gem 'nokogiri'
 gem 'thin'
+gem 'bootstrap_helper'
 
 # Gems used only for assets and not required
 # in production environments by default.
