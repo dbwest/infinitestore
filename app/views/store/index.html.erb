@@ -9,7 +9,7 @@
 			
 				<% @products.each do |product| %>
 				
-					<%= new_row_every_3 do  %>
+					<%= new_row do  %>
 						<div class="span3">
 					        <div class="thumbnail">
 						    <%= image_tag(product.image_url) %>

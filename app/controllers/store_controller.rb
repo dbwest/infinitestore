@@ -1,7 +1,7 @@
 
 class StoreController < ApplicationController
 	def index
-		@count = 3
+		@count = 4
 		@products = Product.order(:title)
 		@cart = current_cart
 	end
