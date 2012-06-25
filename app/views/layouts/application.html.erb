@@ -31,8 +31,10 @@
                 <a href="#">EUR</a>
               </div>
               <div class="span4">
-                <a href="cart.html"><h4>Shopping Cart (3)</h4></a>
-                <a href="cart.html">2 item(s) - $40.00</a>
+                <div id="cart">
+          <%= render @cart %>
+        </div>
+                
               </div>          
               <div class="customer_service">
                 <h4>FREE delivery on ALL orders</h4>
@@ -93,9 +95,7 @@
         
         </section>
         
-        <div id="cart">
-          <%= render @cart %>
-        </div>
+        
         
         
         <%= yield %>
