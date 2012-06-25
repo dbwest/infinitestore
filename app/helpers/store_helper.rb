@@ -1,6 +1,6 @@
 module StoreHelper
 	def new_row (&block)
-	    if (@count%4==0)
+	    if (@count%3==0)
 	    	@count += 1
 		    content_tag("div", :class => "row", &block)
 		else
