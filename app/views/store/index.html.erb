@@ -15,13 +15,12 @@
 						    <%= image_tag(product.image_url, :class => "image-tag") %>
 					            <div class="caption">
 								    <h5><%= product.title %></h5>
-					                <p><%= sanitize(product.description) %>></p>
 					                <%= link_to line_items_path(product_id: product), :class => "btn btn-primary", :remote => "true", method: :post do %>
 								        Add to  
 								        <%= content_tag :i, :class => "icon-shopping-cart icon-white" do %>
 								        <% end %>
 								    <% end %>
-					                <p><span class="label label-info price"><%= number_to_currency(product.price) %></span></p>
+					                <span class="label label-info price"><%= number_to_currency(product.price) %></span>
 					            </div>
 					        </div>
 					    </div>

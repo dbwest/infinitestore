@@ -1,7 +1,16 @@
-<div class="well">
-	<span>
-		<h4><i class="icon-shopping-cart icon-white"></i>
-		x item(s) - <%= number_to_currency(cart.total_price) %></h4>
-		<%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", class: "btn btn-primary", confirm: 'Are you sure?' %>
-	</span>
-</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="span">
+				<h4><i class="icon-shopping-cart icon-white"></i> Your Cart</h4>
+			</div>
+		</div>
+			<%= render(cart.line_items) %>
+
+				<div class="row" style="margin-left:10px; border-top: 1px dotted white;">
+	
+					<div class="span1">Total</div>
+					<div class=""><%= number_to_currency(cart.total_price) %></div>
+				</div>
+		<div class="offset2"><%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", class: "btn btn-primary", confirm: 'Are you sure?' %>
+		</div>
+	</div>

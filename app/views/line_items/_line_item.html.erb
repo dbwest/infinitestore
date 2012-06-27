@@ -1,9 +1,9 @@
 <% if line_item == @current_item %>
-<tr id="current_item">
+<div id="current_item" "row span6"></div>
 <% else %>
-<tr>
+<div class="row">
 <% end %>
-	<td><%= line_item.quantity %>  &times;</td>
-	<td><%= line_item.product.title %></td>
-	<td class="item_price"><%= number_to_currency(line_item.total_price) %></td>
-</tr>
+	<div class="span"><%= line_item.quantity %>  &times;</div>
+	<div class="span2"><%= line_item.product.title %></div>
+	<div class="span item_price"><%= number_to_currency(line_item.total_price) %></div>
+</div>
