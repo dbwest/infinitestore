@@ -10,7 +10,7 @@ class CartsController < ApplicationController
   # GET /carts
   # GET /carts.json
   def index
-    @carts = Cart.all
+    @cart = Cart.all
 
     respond_to do |format|
       format.html # index.html.erb
