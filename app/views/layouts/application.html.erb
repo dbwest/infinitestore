@@ -12,36 +12,38 @@
         ================================================== -->
         <section id="navbar">
           <div class="navbar navbar-fixed-top">
-            <li class="nav-header">
+            <div class="nav-header">
               
                <!-- header -->
       
-        <div class="row-fluid">
+     
           <div class="logo header-fixed-top" style="background-color: black;">
-              <div class="span3">
+              <div class="row-fluid">
+              <div class="span2">
                 <a href="index.html">
                   <h1>Daily Threads</h1>
                 </a>
               </div>
           
-              <div class="span2">
-                <h4>Currency</h4>
-                <a href="#">USD</a> |
-                <a href="#"><strong>GBP</strong></a> |
-                <a href="#">EUR</a>
-              </div>
-              <div class="span4">
-                <div id="cart">
-          <%= render @cart %>
-        </div>
+                <div class="span6">
+                  <form class="navbar-search" action="">
+                    <input type="text" class="search-query" placeholder="Search">
+                  </form> 
+                </div>          
                 
-              </div>          
+                <div class="span2">
+                  <h4>Currency</h4>
+                  <a href="#">USD</a> |
+                  <a href="#"><strong>GBP</strong></a> |
+                  <a href="#">EUR</a>
+                </div>
               <div class="customer_service">
-                <h4>FREE delivery on ALL orders</h4>
+                <h4>Free delivery on orders over $50</h4>
                 <h4><small>Customer service: 800.555.1212</small></h4>
               </div>
+              </div>
           </div>
-        </div>
+     
             <!-- end header -->
 
 
@@ -54,9 +56,8 @@
             <span class="icon-bar"></span>
           </a>
           <div class="nav-collapse">
-            <form class="navbar-search pull-left" action="">
-              <input type="text" class="search-query span2" placeholder="Search">
-            </form>
+            
+            
             <ul class="nav pull-right">
               <li><a href="#">Link</a></li>
               <li class="divider-vertical"></li>
@@ -78,7 +79,9 @@
         
         </section>
         
-        
+       <div id="cart" class="offset1">
+                    <%= render @cart %>
+       </div> 
         
         
         <%= yield %>

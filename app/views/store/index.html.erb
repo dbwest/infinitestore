@@ -3,7 +3,7 @@
 <% end %>
 
 
-<div class="container">
+<div class="container showcase">
 	<div id="main">
 		<div class="span12">
 			
@@ -12,7 +12,7 @@
 					<%= new_row do  %>
 						<div class="span3">
 					        <div class="thumbnail">
-						    <%= image_tag(product.image_url) %>
+						    <%= image_tag(product.image_url, :class => "image-tag") %>
 					            <div class="caption">
 								    <h5><%= product.title %></h5>
 					                <p><%= sanitize(product.description) %>></p>

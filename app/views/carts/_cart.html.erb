@@ -1,7 +1,7 @@
-<span><h4>Your Cart</h4></span>
-<span>x item(s) - <%= number_to_currency(cart.total_price) %></span>
-
-<span style="display:inline; position:fixed;"><!-- START_HIGHLIGHT -->
-	<%= button_to 'Empty cart', cart, method: :delete,
-	#END_HIGHLIGHT
-	    confirm: 'Are you sure?' %></span>
+<div class="well">
+	<span>
+		<h4><i class="icon-shopping-cart icon-white"></i>
+		x item(s) - <%= number_to_currency(cart.total_price) %></h4>
+		<%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", class: "btn btn-primary", confirm: 'Are you sure?' %>
+	</span>
+</div>

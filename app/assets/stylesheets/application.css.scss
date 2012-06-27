@@ -15,12 +15,25 @@
 //
 // First import cyborg variables
 //@import "bootswatch/cyborg/variables";
-
 // Then bootstrap itself
 @import "bootstrap";
 
 // Bootstrap body padding for fixed navbar
-body { padding-top: 120px; }
+body { padding-top: 100px; }
+#empty-button {
+	top: 2px;
+	margin-left: 5px;
+}
+#cart {
+	position: fixed;
+}
+#navbar {
+	margin-bottom: 0px;
+}
+.showcase {
+	position: relative;
+	left: 20px;
+}
 
 // Responsive styles go here in case you want them
 @import "bootstrap-responsive";
