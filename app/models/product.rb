@@ -6,7 +6,10 @@ class Product < ActiveRecord::Base
   before_destroy :ensure_not_referenced_by_any_line_item
 
   def convert_to_euro
-    price * 1.5
+    eu_bank = EuCentralBank.new
+    Money.default_bank = eu_bank
+    eu_bank.update_rates
+    eu_bank.exchange((price.to_f*100), "USD", "EUR")
   end
 
 

@@ -13,6 +13,7 @@ gem 'nokogiri'
 gem 'thin'
 gem 'bootstrap_helper'
 gem 'money'
+gem 'money-rails'
 gem 'eu_central_bank'
 
 # Gems used only for assets and not required
