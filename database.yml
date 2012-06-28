@@ -1,0 +1,28 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: DATABASE_DEVELOPMENT
+  pool: 5
+  username: dev
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: DATABASE_TEST
+  pool: 5
+  username: dev
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: DATABASE_PRODUCTION
+  pool: 5
+  username: root
+  password:
