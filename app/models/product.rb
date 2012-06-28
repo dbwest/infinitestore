@@ -5,6 +5,11 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
+  def convert_to_euro
+    price * 1.5
+  end
+
+
   private
 
   def ensure_not_referenced_by_any_line_item
@@ -15,4 +20,5 @@ class Product < ActiveRecord::Base
   		return false
   	end
   end
+
 end

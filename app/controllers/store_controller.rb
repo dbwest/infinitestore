@@ -1,6 +1,6 @@
 
 class StoreController < ApplicationController
-	def belts
+		def belts
 		@count = 3
 		@products = Product.order(:title)
 		@cart = current_cart
