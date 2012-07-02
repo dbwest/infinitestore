@@ -8,7 +8,6 @@ class Product < ActiveRecord::Base
   def convert_to_euro
     eu_bank = EuCentralBank.new
     Money.default_bank = eu_bank
-    eu_bank.update_rates
     eu_bank.exchange((price.to_f*100), "USD", "EUR")
   end
 

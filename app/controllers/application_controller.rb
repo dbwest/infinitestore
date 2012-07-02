@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :check_for_currency_updates
+
+  def check_for_currency_updates
+    UpdateRates::Bank.update_rates_if_changed
+  end
 
   private
 

@@ -14,7 +14,7 @@ gem 'thin'
 gem 'bootstrap_helper'
 gem 'money'
 gem 'money-rails'
-gem 'eu_central_bank'
+gem 'eu_central_bank', :git => 'git://github.com/RubyMoney/eu_central_bank.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
