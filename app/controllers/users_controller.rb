@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @cart = current_cart
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -37,17 +38,18 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @cart = current_cart
     @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
   def create
+    @cart = current_cart
     @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
-
         format.html { redirect_to users_url, notice: "User #{@user.name} was successfully created." }
         format.json { render json: @user, status: :created, location: @user }
       else
@@ -60,6 +62,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
+    @cart = current_cart
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -76,6 +79,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    @cart = current_cart
     @user = User.find(params[:id])
     @user.destroy
 
