@@ -8,7 +8,7 @@ gem 'rails', '3.2.5'
 gem 'pg'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'bootstrap-sass', '~> 2.0.3'
-# gem 'bootswatch-rails'
+gem 'bootswatch-rails'
 gem 'nokogiri'
 gem 'thin'
 gem 'bootstrap_helper'
@@ -38,7 +38,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+#gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

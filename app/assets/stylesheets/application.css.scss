@@ -14,7 +14,7 @@
 // using 'Cyborg' bootswatch
 //
 // First import cyborg variables
-//@import "bootswatch/cyborg/variables";
+@import "bootswatch/cyborg/variables";
 // Then bootstrap itself
 @import "bootstrap";
 
@@ -39,7 +39,7 @@ body { padding-top: 100px; }
 @import "bootstrap-responsive";
 
 // And finally bootswatch style itself
-//@import "bootswatch/cyborg/bootswatch";
+@import "bootswatch/cyborg/bootswatch";
 
 // Whatever application styles you have go last
-@import "custom";
+// @import "custom";
