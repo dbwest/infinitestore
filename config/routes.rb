@@ -1,4 +1,6 @@
 Dailythreads::Application.routes.draw do
+  resources :users
+
   resources :orders
 
   get "store/sunglasses"
