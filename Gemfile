@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 2.0.3'
 gem 'nokogiri'
 gem 'thin'
 gem 'bootstrap_helper'
+gem 'will_paginate', '~> 3.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -50,3 +51,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+

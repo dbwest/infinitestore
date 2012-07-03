@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @cart = current_cart
+    @orders = Order.paginate page: params[:page], order: 'created_at desc', per_page: 10
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @cart = current_cart
     @order = Order.find(params[:id])
 
     respond_to do |format|
