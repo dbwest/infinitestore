@@ -14,6 +14,9 @@ gem 'thin'
 gem 'bootstrap_helper'
 gem 'will_paginate', '~> 3.0'
 gem 'simple_currency'
+gem "json" 
+gem "money"
+gem "google_currency"
 
 # Gems used only for assets and not required
 # in production environments by default.

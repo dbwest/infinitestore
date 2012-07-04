@@ -27,4 +27,5 @@ $(document).ready(function(){
 	  keyboard: false
 	})
 	$(".alert").alert()
+	$('.nav-tabs').button()
 });
