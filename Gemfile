@@ -8,13 +8,15 @@ gem 'rails', '3.2.5'
 gem 'pg'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'bootstrap-sass', '~> 2.0.3'
-# gem 'bootswatch-rails'
+gem 'bootswatch-rails'
 gem 'nokogiri'
 gem 'thin'
 gem 'bootstrap_helper'
-gem 'money'
-gem 'money-rails'
-gem 'eu_central_bank', :git => 'git://github.com/RubyMoney/eu_central_bank.git'
+gem 'will_paginate', '~> 3.0'
+gem 'simple_currency'
+gem "json" 
+gem "money"
+gem "google_currency"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,7 +42,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -53,3 +55,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+

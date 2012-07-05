@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
@@ -22,4 +23,13 @@ $(document).ready(function(){
             itemSelector : 'div.span3'
         });
 	});
+	$('#myModal').modal({
+	  keyboard: false
+	});
+	$(".alert").alert();
+	$('.nav-tabs').button();
+	
+	
+	
+ ​
 });

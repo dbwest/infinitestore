@@ -20,7 +20,11 @@
 								        <%= content_tag :i, :class => "icon-shopping-cart icon-white" do %>
 								        <% end %>
 								    <% end %>
-					                <span class="label label-info price"><%= number_to_currency(product.convert_to_euro) %></span>
+
+					                <span class="price1 label label-info price"><%= number_to_currency(product.price*100) %></span>
+					                <span style='display:none' class="price2 label label-info price"><%= number_to_currency((product.price*100).exchange_to(:EUR)) %></span>
+					                <span style='display:none' class="price3 label label-info price"><%= number_to_currency((product.price*100).exchange_to(:GBP)) %></span>
+
 					            </div>
 					        </div>
 					    </div>

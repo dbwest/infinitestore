@@ -11,6 +11,9 @@
 					<div class="span1">Total</div>
 					<div class=""><%= number_to_currency(cart.total_price) %></div>
 				</div>
-		<div class="offset2"><%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", class: "btn btn-primary", confirm: 'Are you sure?' %>
+		<div class="offset2"><%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", :class => "btn btn-primary", confirm: 'Are you sure?' %>
 		</div>
+		<div class="offset2"><%= button_to 'Checkout', new_order_path, method: :get, id:"checkout-button", :class => "btn btn-primary" %>
+		</div>
+	</div>
 	</div>

@@ -1,4 +1,22 @@
 Dailythreads::Application.routes.draw do
+  get "admin" => 'admin#index'
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'login' => :destroy
+  end
+
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
+  resources :users
+
+  resources :orders
+
   get "store/sunglasses"
 
   get "store/shirts"

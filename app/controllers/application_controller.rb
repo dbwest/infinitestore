@@ -1,22 +1,24 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :check_for_currency_updates
-
-  def check_for_currency_updates
-    UpdateRates::Bank.update_rates_if_changed
-  end
+  before_filter :authorize
 
   private
 
-    def current_cart
-      Cart.find(session[:cart_id])
-    rescue ActiveRecord::RecordNotFound
-      cart = Cart.create
-      session[:cart_id] = cart.id
-      cart
-    end
+  def current_cart
+    Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    cart = Cart.create
+    session[:cart_id] = cart.id
+    cart
+  end
 
-protected
+  protected
+
+  def authorize
+    unless User.find_by_id(session[:user_id])
+      redirect_to login_url, notice: 'Please Log In'
+    end
+  end
 
 
 end
