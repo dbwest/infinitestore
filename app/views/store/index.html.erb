@@ -21,10 +21,9 @@
 								        <% end %>
 								    <% end %>
 
-					                <span class="price1 label label-info price"><%= number_to_currency(product.price*100) %></span>
-					                <span style='display:none' class="price2 label label-info price"><%= number_to_currency((product.price*100).exchange_to(:EUR)) %></span>
-					                <span style='display:none' class="price3 label label-info price"><%= number_to_currency((product.price*100).exchange_to(:GBP)) %></span>
 
+					                <span class="price1 label label-info price"><%= number_to_currency(product.price, unit: "USD$", precision: 2) %></span>
+					                
 					            </div>
 					        </div>
 					    </div>

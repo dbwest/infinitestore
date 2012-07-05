@@ -12,4 +12,5 @@ module StoreHelper
     	content_tag("header", :class => "jumbotron subhead offset2", &block)
     end
     
+
 end
