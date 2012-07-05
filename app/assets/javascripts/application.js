@@ -25,7 +25,11 @@ $(document).ready(function(){
 	});
 	$('#myModal').modal({
 	  keyboard: false
-	})
-	$(".alert").alert()
-	$('.nav-tabs').button()
+	});
+	$(".alert").alert();
+	$('.nav-tabs').button();
+	
+	
+	
+ ​
 });

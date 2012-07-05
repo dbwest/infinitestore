@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
  
         <!-- Navbar
         ================================================== -->
@@ -33,12 +34,14 @@
                 
                 <div class="span2">
                   <h4>Currency</h4>
-                  <div class="btn-group" data-toggle="buttons-radio">
-                    <button class="btn btn-primary">USD</button>
-                    <button class="btn btn-primary">GBP</button>
-                    <button class="btn btn-primary">EUR</button>
+                  <div id="currency-radio" class="btn-group" data-toggle="buttons-radio">
+                    <button id="currency1" class="btn btn-primary">USD</button>
+                    <button id="currency2" class="btn btn-primary">GBP</button>
+                    <button id="currency3" class="btn btn-primary">EUR</button>
                   </div>
+
                 </div>
+                
               <div class="customer_service">
                 <h4>Free delivery on orders over $50</h4>
                 <h4><small>Customer service: 800.555.1212</small></h4>

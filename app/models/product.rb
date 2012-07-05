@@ -11,11 +11,6 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
-  def convert_to_euro
-    @converted = price.to_f.usd.to_eur
-  end
-
-
   private
 
   def ensure_not_referenced_by_any_line_item
