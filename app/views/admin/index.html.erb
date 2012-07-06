@@ -2,4 +2,9 @@
 	<h1>Welcome</h1>
 	It's <%= Time.now %>
 	We have <%= pluralize(@total_orders, "order") %>
+	<div class="btn btn-primary">
+		View Orders
+		</div>
+		<%= button_to "Show Orders", orders_path, :method => "get", :class => "btn btn-primary" %>
+
 </div>

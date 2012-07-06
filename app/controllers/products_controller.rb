@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
   def index
     @cart = current_cart
     @products = Product.all
+    @thumbnails = Thumbnail.all
 
     respond_to do |format|
       format.html # index.html.erb
