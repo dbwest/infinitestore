@@ -28,7 +28,9 @@ $(document).ready(function(){
 	});
 	$(".alert").alert();
 	$('.nav-tabs').button();
-	
+	$('#myModal').modal({
+	  show: false
+	})	
 	
 	
  ​
