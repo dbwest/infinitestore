@@ -3,7 +3,7 @@
 <% else %>
 <div class="row">
 <% end %>
-	<div class="span1"><h6><%= truncate(line_item.product.title, :length => 35) %> <br> &times; <%= line_item.quantity %></h6></div>
 	<div class="span"><%= image_tag line_item.product.thumb_url, :class => "thumbnail" %></div>
+	<div class="span1"><h6><%= truncate(line_item.product.title, :length => 35) %> <br><h4> &times; <%= line_item.quantity %></h4></h6></div>
 	<div class="span item_price"><%= number_to_currency(line_item.total_price) %></div>
 </div>

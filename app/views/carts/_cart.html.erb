@@ -10,7 +10,7 @@
 			    <% end %>
 			</div>
 		</div>
-			<%= render(cart.line_items) %>
+			<%= render(cart.line_items.order(:created_at)) %>
 			<div class="row" style="margin-left:10px; border-top: 1px dotted white; margin-top: 6px;">
 				<div class="span1">Total</div>
 				<div class=""><%= number_to_currency(cart.total_price) %></div>
