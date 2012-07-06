@@ -96,6 +96,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to line_items_url }
+      format.js
       format.json { head :ok }
     end
   end

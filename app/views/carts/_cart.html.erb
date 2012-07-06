@@ -1,19 +1,37 @@
 	<div class="container-fluid">
-		<div class="row">
+		<div class="row" style="height: 2em;">
 			<div class="span">
 				<h4><i class="icon-shopping-cart icon-white"></i> Your Cart</h4>
 			</div>
+			<div class="pull-right"><%= link_to cart, :class => "btn-mini btn", method: :delete, :"data-toggle" => "modal", :href => "#myModal", :remote => "true" do %>
+			        <%= content_tag :i, :class => "icon-remove icon-white" do %>
+			        <% end %>
+			        Delete
+			    <% end %>
+			</div>
 		</div>
 			<%= render(cart.line_items) %>
-
-				<div class="row" style="margin-left:10px; border-top: 1px dotted white;">
-	
-					<div class="span1">Total</div>
-					<div class=""><%= number_to_currency(cart.total_price) %></div>
-				</div>
-		<div class="offset2"><%= button_to 'Empty cart', cart, method: :delete, id:"empty-button", :class => "btn btn-primary", confirm: 'Are you sure?' %>
+			<div class="row" style="margin-left:10px; border-top: 1px dotted white; margin-top: 6px;">
+				<div class="span1">Total</div>
+				<div class=""><%= number_to_currency(cart.total_price) %></div>
+			</div>
+		<div class="row">
+			<div class="offset2"><%= button_to 'Checkout', new_order_path, method: :get, id:"checkout-button", :class => "btn btn-primary" %>
+			</div>
 		</div>
-		<div class="offset2"><%= button_to 'Checkout', new_order_path, method: :get, id:"checkout-button", :class => "btn btn-primary" %>
-		</div>
-	</div>
+		 <div id="modal">
+       <div id="myModal" class="modal hide">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3>Are You Sure You Want To Delete Your Cart?</h3>
+          </div>
+          <div class="modal-footer">
+            <%= link_to cart, :class => "btn pull-left btn-primary", :remote => "true", method: :delete, :"data-dismiss" => "modal" do %>
+                      Delete  
+              <%= content_tag :i, :class => "icon-trash icon-white" do %>
+              <% end %>
+              <a href="#" class="btn pull-left" data-dismiss="modal" >Cancel</a>
+            <% end %>
+          </div>
+       </div>
 	</div>
