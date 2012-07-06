@@ -31,6 +31,9 @@ $(document).ready(function(){
 	$('#myModal').modal({
 	  show: false
 	})	
+	$('#myModal2').modal({
+	  show: false
+	})	
 	
 	
  ​
