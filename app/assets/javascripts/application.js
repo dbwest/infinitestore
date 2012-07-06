@@ -15,6 +15,12 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
+	$('#myModal').modal({
+	  show: false
+	})	
+	$('#myModal2').modal({
+	  show: false
+	})	
 $(document).ready(function(){
 	var $container = $('.thumbnails');
 
@@ -28,12 +34,6 @@ $(document).ready(function(){
 	});
 	$(".alert").alert();
 	$('.nav-tabs').button();
-	$('#myModal').modal({
-	  show: false
-	})	
-	$('#myModal2').modal({
-	  show: false
-	})	
 	
 	
  ​
