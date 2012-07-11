@@ -7,8 +7,10 @@
 	thumb_function.add_save("my_image_#{@counter}")
 	blitline_service = Blitline.new
 	blitline_service.jobs << job
-	product.thumb_url = blitline_service.post_jobs["results"][0]["images"][0]["s3_url"]
-	product.save
+	#product.thumb_url = blitline_service.post_jobs["results"][0]["images"][0]["s3_url"]
+	puts blitline_service.post_jobs["results"][0]["images"][0]["s3_url"]
+	#system ("wget #{blitline_service.post_jobs["results"][0]["images"][0]["s3_url"]}")
+	#product.save
 #	Thumbnail.create(:thumb_url => blitline_service.post_jobs["results"][0]["images"][0]["s3_url"])
 	#Thumbnail.create(:thumb_url => blitline_service.post_jobs["results"][0]["images"][0]["s3_url"])
 	@counter = @counter+1
