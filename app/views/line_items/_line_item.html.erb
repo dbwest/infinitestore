@@ -4,6 +4,11 @@
 <div class="row">
 <% end %>
 	<div class="span"><%= image_tag line_item.product.thumb_url, :class => "thumbnail" %></div>
-	<div class="span1"><h6><%= truncate(line_item.product.title, :length => 35) %> <br><span class="badge badge-inverse"><%= line_item.quantity %></span></h6></div>
+	<div class="span1"><h6><%= truncate(line_item.product.title, :length => 35) %> <br /><div>
+		<i class="icon-plus-sign icon-white"></i>&nbsp;&nbsp;&nbsp;<i class="icon-minus-sign icon-white"></i><br /><div style="margin-top:6px;">
+			<span style="margin-top:10px;" class="badge badge-inverse"><%= line_item.quantity %></span>
+		</div>
+	</div>
+</div>
 	<div class="span item_price"><%= number_to_currency(line_item.total_price) %></div>
 </div>
