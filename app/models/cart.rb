@@ -21,9 +21,9 @@ class Cart < ActiveRecord::Base
     current_item
   end
 
-  def remove_product(product_id)
+  def subtract_product(product_id)
     current_item = line_items.find_by_product_id(product_id)
-    if current_item
+    if (current_item.quantity > 0)
       current_item.quantity -= 1
     else
       # put error code here

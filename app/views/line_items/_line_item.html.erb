@@ -5,7 +5,14 @@
 <% end %>
 	<div class="span"><%= image_tag line_item.product.thumb_url, :class => "thumbnail" %></div>
 	<div class="span1"><h6><%= truncate(line_item.product.title, :length => 35) %> <br /><div>
-		<i class="icon-plus-sign icon-white"></i>&nbsp;&nbsp;&nbsp;<i class="icon-minus-sign icon-white"></i><br /><div style="margin-top:6px;">
+		<%= link_to line_items_path(product_id: product), :class => "btn btn-primary", :remote => "true", method: :post do %>
+			<i class="icon-plus-sign icon-white"></i>
+		<% end %>
+		&nbsp;&nbsp;&nbsp;
+		<%= link_to line_items_path(product_id: product), :class => "btn btn-primary", :remote => "true", method: :post do %>
+			<i class="icon-minus-sign icon-white"></i>
+		<% end %>
+		<br /><div style="margin-top:6px;">
 			<span style="margin-top:10px;" class="badge badge-inverse"><%= line_item.quantity %></span>
 		</div>
 	</div>
