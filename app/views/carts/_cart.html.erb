@@ -52,11 +52,11 @@
           </div>
           <div class="modal-footer">
               <a href="#" class="btn pull-left" data-dismiss="modal" >Close</a>
-            <%= link_to cart, :class => "btn pull-left btn-primary", :remote => "true", method: :delete, :"data-dismiss" => "modal" do %>
-                      Delete  
-              <%= content_tag :i, :class => "icon-trash icon-white" do %>
+            <%= link_to cart, :class => "btn-mini btn", method: :delete, :"data-toggle" => "modal", :"data-dismiss" => "modal", :href => "#myModal", :remote => "true" do %>
+              <%= content_tag :i, :class => "icon-remove icon-white" do %>
               <% end %>
-            <% end %>
+              Delete
+          <% end %>
           </div>
        </div>
 	</div>
