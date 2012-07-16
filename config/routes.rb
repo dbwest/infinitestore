@@ -8,7 +8,7 @@ Dailythreads::Application.routes.draw do
     delete 'login' => :destroy
   end
 
-  match 
+  match "line_items/subtract", "LineItems#subtract", :as => "line_items_subtract"
 
   get "sessions/new"
 
