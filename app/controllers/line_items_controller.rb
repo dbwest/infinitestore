@@ -7,7 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class LineItemsController < ApplicationController
-  skip_before_filter :authorize, only: :create
+  skip_before_filter :authorize, only: [:create, :decrement]
   # GET /line_items
   # GET /line_items.json
   def index
@@ -70,24 +70,21 @@ class LineItemsController < ApplicationController
     end
   end
 
-  def subtract
-    @cart = current_cart
-    product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
-    @line_item = @cart.subtract_product(product.id)
-    if (@line_item.count<=0)
-      @line_item.destroy
-    end
-
-    respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to store_url }
-        format.js
-        format.json { render json: @line_item,
-                      status: :deleted, location: @line_item }
-      end
-    end
+ def decrement
+  @cart = current_cart
+  @line_item = LineItem.find(params[:id])    
+  if @line_item.quantity > 1
+    @line_item.decrement(:quantity)
+  else
+    @line_item.destroy
   end
+  @line_item.save
+
+  respond_to do |format|
+    format.html { redirect_to store_url }
+    format.js
+  end
+end  
 
   # PUT /line_items/1
   # PUT /line_items/1.json
@@ -105,6 +102,8 @@ class LineItemsController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /line_items/1
   # DELETE /line_items/1.json

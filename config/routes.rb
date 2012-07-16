@@ -8,8 +8,6 @@ Dailythreads::Application.routes.draw do
     delete 'login' => :destroy
   end
 
-  match "line_items/subtract", "LineItems#subtract", :as => "line_items_subtract"
-
   get "sessions/new"
 
   get "sessions/create"
@@ -18,7 +16,7 @@ Dailythreads::Application.routes.draw do
 
   resources :users
 
-  resources :orders 
+  resources :orders
 
   get "store/sunglasses"
 
@@ -37,6 +35,10 @@ Dailythreads::Application.routes.draw do
   get "store/hats"
 
   resources :line_items
+
+  match "line_items/decrement", :to=> 'line_items#decrement', :via => :post
+
+
 
   resources :carts
 
