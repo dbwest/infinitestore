@@ -59,7 +59,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       if @cart.save
-        format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
+        format.html { redirect_to @cart }
         format.json { render json: @cart, status: :created, location: @cart }
       else
         format.html { render action: "new" }
@@ -75,7 +75,7 @@ class CartsController < ApplicationController
 
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
-        format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
+        format.html { redirect_to @cart }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
