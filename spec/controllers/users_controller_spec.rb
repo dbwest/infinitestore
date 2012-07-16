@@ -24,14 +24,23 @@ describe UsersController do
   # User. As you add validations to User, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+      "name" => "earl",
+      "password_digest" => "$3a$10$Opv2LL3OhIhimHSN8Pqcq.QMVPzqjt8kX2GC9qtT0fDQ5UgK3C1wy",
+      "is_admin" => true
+    }
   end
   
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # UsersController. Be sure to keep this updated too.
   def valid_session
-    {}
+    {
+      "name" => "earl",
+      "password_digest" => "$3a$10$Opv2LL3OhIhimHSN8Pqcq.QMVPzqjt8kX2GC9qtT0fDQ5UgK3C1wy",
+      "is_admin" => true
+
+    }
   end
 
   describe "GET index" do

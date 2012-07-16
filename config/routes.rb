@@ -1,5 +1,6 @@
 Dailythreads::Application.routes.draw do
   get "admin" => 'admin#index'
+  get "index" => 'store#index'
 
   controller :sessions do
     get 'login' => :new

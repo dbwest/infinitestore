@@ -29,9 +29,6 @@ $(document).ready(function(){
             itemSelector : 'div.span3'
         });
 	});
-	$('#myModal').modal({
-	  keyboard: false
-	});
 	$(".alert").alert();
 	$('.nav-tabs').button();
 	
