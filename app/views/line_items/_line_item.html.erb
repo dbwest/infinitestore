@@ -12,11 +12,15 @@
 	</div>
 </div>
 	<div class="span1 item_price"><%= number_to_currency(line_item.total_price) %>
-	<%= link_to line_items_path(product_id: line_item.product), :class => "btn btn-mini btn", :style => "margin-top:8px;", :remote => "true", method: :post do %>
+		<br>
+		<br>
+		&nbsp;
+	<%= link_to line_items_path(product_id: line_item.product), :style => "margin-top:8px;", :remote => "true", method: :post do %>
 			<i class="icon-plus-sign icon-white"></i>
 		<% end %>
-		&nbsp;&nbsp;&nbsp;
-		<%= link_to line_items_decrement_path(:id => line_item.id), :class => "btn btn-mini btn", :method => :post, :remote => true do %>
+		<br>
+		&nbsp;
+		<%= link_to line_items_decrement_path(:id => line_item.id), :method => :post, :remote => true do %>
 			<i class="icon-minus-sign icon-white"></i>
 		<% end %>
 		</div>
