@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails', '6.0.3.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'sass-rails',   '~> 3.2.3'
+gem 'sass-rails', '~> 5.0.8'
 gem 'bootstrap-sass', '~> 2.0.3'
-gem 'bootswatch-rails'
+gem 'bootswatch-rails', '>= 0.0.12'
 gem 'nokogiri'
 gem 'thin'
-gem 'bootstrap_helper'
+gem 'bootstrap_helper', '>= 4.2.3'
 gem 'will_paginate', '~> 3.0'
 gem 'simple_currency'
 gem "json" 
@@ -23,7 +23,7 @@ gem 'blitline'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 4.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -32,7 +32,7 @@ group :assets do
 end
 
 group :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 2.10.1'
 end
 
 group :test do
@@ -41,7 +41,7 @@ group :test do
   gem 'spork'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
