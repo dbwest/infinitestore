@@ -9,7 +9,7 @@ gem 'pg'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'bootstrap-sass', '~> 2.0.3'
 gem 'bootswatch-rails'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.11.4'
 gem 'thin'
 gem 'bootstrap_helper'
 gem 'will_paginate', '~> 3.0'
@@ -37,7 +37,7 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'webrat', '0.7.1'
+  gem 'webrat', '0.7.2'
   gem 'spork'
 end
 
