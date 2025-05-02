@@ -32,7 +32,7 @@ group :assets do
 end
 
 group :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 8.0.0'
 end
 
 group :test do
